@@ -1,38 +1,154 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+        .App {
+            text-align: center;
+        }
+        
+        button {
+            display: inline-block;
+            cursor: pointer;
+            color: rgb(19, 15, 10);
+            background-color: transparent;
+            margin: 9px 6px;
+            border-radius: 7px;
+            padding: 10px 15px;
+        }
+        
+        #box {
+            background-color: #6fadd6;
+            align-items: center;
+            margin: 1rem;
+        }
+        
+        #text {
+            background-color: rgb(244, 250, 253);
+            width: 20rem;
+            padding: 3rem;
+            border-radius: 7px;
+            display: flexbox;
+            margin: 0 auto;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+        }
+        
+        #new {
+            background-color: #d8edfc;
+        }
+        
+        #author {
+            font-size: small;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        
+        #img1 {
+            height: 600px;
+        }
+        
+        #boxx {
+            background-color: #f0faf5;
+            width: 20rem;
+            padding: 3rem;
+            border-radius: 7px;
+            margin: 0 auto;
+            position: center;
+            margin-top: 20rem;
+        }
+        
+        #img2 {
+            height: 600px;
+        }
+        
+        #boox {
+            background-color: #fafaf0;
+            width: 15rem;
+            padding: 1rem;
+            border-radius: 7px;
+            margin: 0 auto;
+            margin-top: 15rem;
+        }
+        
+        #img3 {
+            height: 400px;
+        }
+        
+        #bbox {
+            background-color: #fafaf0;
+            width: 15rem;
+            padding: 1rem;
+            border-radius: 7px;
+            margin: 0 auto;
+            margin-top: 25rem;
+        }
+        
+        #img4 {
+            height: 600px;
+        }
+        
+        .page3 {
+            background-color: rgb(95, 57, 131);
+            color: rgb(236, 222, 243);
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        html {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        /* calculator  */
+        
+        *,
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+        
+        .back {
+            margin: 0;
+            background: linear-gradient(to left, #aa4bf7, #5d87fa);
+        }
+        
+        .calculator-grid {
+            display: grid;
+            margin-top: 3rem;
+            justify-content: center;
+            grid-template-columns: repeat(4, 6rem);
+            grid-template-rows: minmax(5rem, auto) repeat(5, 6rem);
+        }
+        
+        .calculator-grid>button {
+            cursor: pointer;
+            font-size: 1.5rem;
+            /* border: 2px solid; */
+            outline: none;
+            background-color: #d4defa;
+        }
+        
+        .calculator-grid>button:hover,
+        .calculator-grid>button:focus {
+            background-color: #ad53f7;
+        }
+        
+        .span {
+            grid-column: span 2;
+        }
+        
+        .output {
+            grid-column: 1 / -1;
+            background-color: #232324;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding: .70rem;
+        }
+        
+        .output .pr-operand {
+            color: #10f871;
+            font-size: 2rem;
+        }
+        
+        .output .cu-operand {
+            color: #2baaf3;
+            font-size: 3rem;
+        }

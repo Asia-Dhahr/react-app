@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Qouts from "./qoutes";
+import Website from "./parallax";
+import Scroll from "./scroll";
+import Dark from "./content/darkMode";
+import styled from "styled-components";
+import Calculator from "./calculator";
 
-function App() {
+const Container = styled.div`
+  max-width: 50$;
+  margin: 8rem auto 0;
+  // background: #47f7ff;
+`;
+
+const MyColor = () => {
+  const [color, setColor] = useState("#f6fhf3");
+  const randomize = () => {
+    const randomColor = "#" + Math.floor(Math.random() * 985149).toString();
+    setColor(randomColor);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Scroll />
+      <h1 style={{ backgroundColor: `${color}` }}>{color}</h1>
+      <button onClick={randomize}>randomize</button>
+      <button onClick={() => navigator.clipboard.writeText(color)}>copy</button>
+      <Qouts />
+      <Website />
+
+      <Container>
+        <Dark />
+      </Container>
+      <hr />
+      <hr />
+      <hr />
+
     </div>
   );
-}
+};
 
-export default App;
+export default MyColor;
